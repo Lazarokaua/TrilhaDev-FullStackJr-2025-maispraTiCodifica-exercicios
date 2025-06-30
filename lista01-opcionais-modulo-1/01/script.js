@@ -18,15 +18,14 @@ let anosComoFumante = input("e quantos anos já vem fumando? ")
  */
 
 function calcularDiasPerdidosPorFumar(qtdePorDia, anosComoFumante) {
-    const totalAnosEmDias = anosComoFumante * 365 // dias totais como fumante
+    const totalCigarrosVida = (qtdePorDia * 365) * anosComoFumante // dias totais como fumante
 
-    const totalCigarros = qtdePorDia * totalAnosEmDias
     // 1 cigarro -> 10 min perdidos de vida
-    const minutosPerdidosDeVida = totalCigarros * 10 // total de minutos perdidos
+    const minutosPerdidosDeVida = totalCigarrosVida * 10 // total de minutos perdidos
 
 
     // Um dia tem 1.440 minutos, que nada mais é que 24 horas x 60 minutos, então, para encontrar a quantidade de dias em uma determinada quantidade de minutos, você irá dividir os minutos por 60, após, dividir novamente por 24.
-    const diasPerdidos = minutosPerdidosDeVida / 1440
+    const diasPerdidos = minutosPerdidosDeVida / (24 * 60)
 
 
     // -> exibir total em dias e total em anos.
