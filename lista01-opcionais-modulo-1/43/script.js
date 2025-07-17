@@ -18,5 +18,5 @@ let obj1 = { a: 1, b: 2, c: 6 };
 let obj2 = { a: 12, b: 2, c: 3 };
 
 // Exibe o resultado da função no console
-console.log(mergeObjects(obj1, obj2))
+console.log(mergeObjects(obj1, obj2))   
 
