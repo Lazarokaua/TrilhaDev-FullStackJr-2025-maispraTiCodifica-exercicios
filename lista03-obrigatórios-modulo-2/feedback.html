@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Feedback</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            padding: 32px 24px;
+        }
+
+        h1 {
+            color: #1abc9c;
+            margin-top: 0;
+        }
+
+        form div {
+            margin-bottom: 18px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #117864;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #b2bec3;
+            border-radius: 5px;
+            margin-top: 4px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background: #1abc9c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background: #16a085;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Formulário de Feedback</h1>
+        <form action="#" method="post" aria-label="Formulário de Feedback">
+            <div>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required autocomplete="name"><br><br>
+            </div>
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required autocomplete="email"><br><br>
+            </div>
+            <div>
+                <label for="endereco">Endereço Completo:</label><br>
+                <input type="text" id="endereco" name="endereco" required autocomplete="street-address"><br><br>
+            </div>
+            <div>
+                <label for="tipo">Tipo de Feedback:</label><br>
+                <select id="tipo" name="tipo" required>
+                    <option value="elogio">Elogio</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="outro">Outro</option>
+                </select><br><br>
+            </div>
+            <div>
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="5" required></textarea><br><br>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open in Warp", // Um nome para nossa tarefa
+      "type": "shell",
+      "command": "open -a Warp .", // O comando que abre o Warp na pasta atual
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never" // Não mostra a saída do comando no terminal do VS Code
+      }
+    }
+  ]
+}

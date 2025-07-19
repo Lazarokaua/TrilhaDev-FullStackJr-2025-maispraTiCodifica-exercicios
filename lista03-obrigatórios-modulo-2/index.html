@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Institucional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1>Bem-vindo à Nossa Empresa</h1>
+        <p id="importante">Somos dedicados a oferecer as melhores soluções para nossos clientes, com foco em inovação e excelência.</p>
+        <nav id="navMenu" class="nav-menu" aria-label="Menu principal">
+            <ul>
+                <li><a href="#missao">Missão</a></li>
+                <li><a href="#visao">Visão</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="missao">
+            <h2>Missão</h2>
+            <p>Nossa missão é transformar ideias em resultados, promovendo o desenvolvimento sustentável e o sucesso dos nossos parceiros.</p>
+        </section>
+        <section id="visao">
+            <h2>Visão</h2>
+            <p>Ser referência no mercado, reconhecida pela qualidade, ética e compromisso com a evolução contínua.</p>
+        </section>
+        <!-- Galeria de Imagens com Grid e Flexbox -->
+        <section class="galeria-flex" id="galeria" aria-label="Galeria de imagens">
+            <div class="galeria-grid">
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+1" alt="Imagem 1">
+                    <figcaption>Legenda 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+2" alt="Imagem 2">
+                    <figcaption>Legenda 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+3" alt="Imagem 3">
+                    <figcaption>Legenda 3</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+4" alt="Imagem 4">
+                    <figcaption>Legenda 4</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+5" alt="Imagem 5">
+                    <figcaption>Legenda 5</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+6" alt="Imagem 6">
+                    <figcaption>Legenda 6</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+7" alt="Imagem 7">
+                    <figcaption>Legenda 7</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://placehold.co/200x150?text=Img+8" alt="Imagem 8">
+                    <figcaption>Legenda 8</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nossa Empresa. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Menu Hamburger
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        function toggleMenu() {
+            const expanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+            hamburgerBtn.setAttribute('aria-expanded', !expanded);
+            navMenu.classList.toggle('open');
+            hamburgerBtn.classList.toggle('active');
+            if (!expanded) {
+                // Foca no primeiro link do menu ao abrir
+                const firstLink = navMenu.querySelector('a');
+                if (firstLink) firstLink.focus();
+            }
+        }
+        hamburgerBtn.addEventListener('click', toggleMenu);
+        // Fecha o menu ao clicar fora
+        document.addEventListener('click', function(e) {
+            if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && e.target !== hamburgerBtn) {
+                navMenu.classList.remove('open');
+                hamburgerBtn.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        // Fecha o menu com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                hamburgerBtn.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.focus();
+            }
+        });
+    </script>
+</body>
+</html>
