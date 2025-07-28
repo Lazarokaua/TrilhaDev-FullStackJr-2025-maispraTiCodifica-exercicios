@@ -1,5 +1,17 @@
 {
-  "dependencies": {
-    "prompt-sync": "^4.2.0"
-  }
+    "type": "commonjs",
+    "scripts": {
+        "dev": "ts-node"
+    },
+    "dependencies": {
+        "@google/genai": "^1.11.0",
+        "nodemon": "^3.1.10",
+        "prompt-sync": "^4.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^24.1.0",
+        "@types/prompt-sync": "^4.2.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3"
+    }
 }

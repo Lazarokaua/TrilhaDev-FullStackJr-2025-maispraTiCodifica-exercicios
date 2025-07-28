@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es2016", /* Qual versão do JS gerar: ES2016 é moderna e bem suportada. */
+        "module": "commonjs", /* Sistema de módulos que o JS gerado usará. Padrão para Node.js. */
+        "rootDir": "./lista01-opcionais-modulo-1", /* Onde seus arquivos de código TypeScript (.ts) vão ficar. */
+        "outDir": "./dist", /* Onde o TypeScript vai colocar os arquivos JavaScript (.js) gerados. */
+        "esModuleInterop": true, /* Permite compatibilidade entre diferentes tipos de módulos. */
+        "forceConsistentCasingInFileNames": true, /* Garante que os nomes de arquivos sejam consistentes. */
+        "strict": true, /* ATIVE ISSO! Força as melhores práticas e te ajuda a aprender de verdade. */
+        "skipLibCheck": true /* Pula a verificação de tipos em arquivos de declaração. */
+    }
+}
